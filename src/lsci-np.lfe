@@ -313,6 +313,29 @@
 (defun meshgrid (coords kwargs)
   (lsci-py:func 'numpy 'meshgrid coords kwargs))
 
+;; Mathematical functions
+;;
+(defun + (a b)
+  (add a b))
+
+(defun * (a b)
+  (multiply a b))
+
+(defun / (a b)
+  (divide a b))
+
+(defun ** (a b)
+  (power a b))
+
+(defun ^ (a b)
+  (power a b))
+
+(defun - (a b)
+  (subtract a b))
+
+(defun % (a b)
+  (mod a b))
+
 ;; I/O
 ;;
 (defun genfromtxt (filename)
