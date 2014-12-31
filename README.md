@@ -20,6 +20,8 @@ the current development status:
    <strong>complete</strong>
  * [statistics](https://docs.python.org/3/library/statistics.html) -
    <strong>complete</strong>
+ * [decimal](https://docs.python.org/3/library/decimal.html) -
+   <strong>complete</strong>
  * [NumPy](http://www.numpy.org/) -
    <strong>in progress</strong>
  * [SciPy](http://www.scipy.org/scipylib/index.html) -
@@ -152,10 +154,12 @@ $ make shell-no-deps
 
 More detailed usage information in separate docs, per-wrapped library:
 
-* [lsci-math & lsci-cmath](doc/math.md) - The ``math`` and ``cmath`` Python
+* [lsci-math & lsci-cmath](doc/math.md) - The ``math`` and ``cmath`` Python 3
   Standard library modules in LFE
 * [lsci-stats](doc/stats.md) - The ``statistics`` Python 3 Standard library
-  modules in LFE
+  module in LFE
+* [lsci-dec](doc/dec.md) - The ``decimal`` Python 3 Standard library
+  module in LFE
 * [lsci-np](doc/numpy.md) - NumPy in LFE
 * [lsci-sp](doc/scipy.md) - SciPy in LFE
 * lsci-pd - Pandas in LFE (TBD)
