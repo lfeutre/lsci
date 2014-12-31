@@ -3,9 +3,8 @@
 
 (include-lib "lsci/include/sp.lfe")
 
-;; XXX is the 'str needed in this case?
 (defun version ()
-  (py:const 'scipy '__version__ 'str))
+  (py:const 'scipy '__version__))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Wrappers - the following functions couldn't be simply wrapped with the

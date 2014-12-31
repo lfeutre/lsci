@@ -25,12 +25,20 @@
       ;; Statistical functions (scipy.stats)
       ;; Statistical functions for masked arrays (scipy.stats.mstats)
       ;; C/C++ integration (scipy.weave)
+      ))
+
+  (defun get-kwarg-sp-funcs ()
+    '(;; TBD
       )))
 
 (defmacro generate-sp-api ()
   `(progn ,@(py-util:make-funcs (get-sp-funcs) 'scipy)))
 
+(defmacro generate-kwarg-sp-api ()
+  `(progn ,@(py-util:make-kwarg-funcs (get-kwarg-sp-funcs) 'scipy)))
+
 (generate-sp-api)
+;(generate-kwarg-sp-api)
 
 (defun loaded-sp ()
   "This is just a dummy function for display purposes when including from the

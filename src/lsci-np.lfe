@@ -304,10 +304,6 @@
 
 ;; Numerical ranges
 ;;
-(defun linspace (start stop kwargs)
-  (py:func 'numpy 'linspace `(,start ,stop) kwargs))
-
-;; XXX these two look like they could be done with the macros ... double check
 (defun meshgrid (coords)
   (py:func 'numpy 'meshgrid coords))
 
@@ -344,11 +340,3 @@
 
 (defun genfromtxt (filename kwargs)
   (py:func 'numpy 'genfromtxt `(,(list_to_binary filename)) kwargs))
-
-;; Polynomials
-;;
-(defun polyfit (x y degree kwargs)
-  (py:func 'numpy 'polyfit `(,x ,y ,degree) kwargs))
-
-(defun poly1d (c-or-r kwargs)
-  (py:func 'numpy 'poly1d `(,c-or-r) kwargs))

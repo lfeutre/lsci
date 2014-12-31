@@ -131,6 +131,14 @@
       ;; Set routines
       ;; Sorting, searching, and counting
       ;; Statistics
+      ))
+
+  (defun get-kwarg-np-funcs ()
+    '(;; Numerical ranges
+      (linspace 3)
+      ;; Polynomials
+      (polyfit 4)
+      (poly1d 2)
       )))
 
 (defmacro generate-np-create-api ()
@@ -145,10 +153,14 @@
 (defmacro generate-np-other-api ()
   `(progn ,@(py-util:make-funcs (get-np-other-funcs) 'numpy)))
 
+(defmacro generate-kwarg-np-api ()
+  `(progn ,@(py-util:make-kwarg-funcs (get-kwarg-np-funcs) 'numpy)))
+
 (generate-np-create-api)
 (generate-np-manip-api)
 (generate-np-math-api)
 (generate-np-other-api)
+(generate-kwarg-np-api)
 
 (defun loaded-np ()
   "This is just a dummy function for display purposes when including from the
