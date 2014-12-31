@@ -18,6 +18,8 @@ the current development status:
    <strong>complete</strong>
  * [cmath](https://docs.python.org/3/library/cmath.html) -
    <strong>complete</strong>
+ * [statistics](https://docs.python.org/3/library/statistics.html) -
+   <strong>complete</strong>
  * [NumPy](http://www.numpy.org/) -
    <strong>in progress</strong>
  * [SciPy](http://www.scipy.org/scipylib/index.html) -
