@@ -1,33 +1,24 @@
-from scipy.interpolate import interpolate
-
 import numpy as np
+
+from scipy.interpolate import interpolate
 
 from cytoolz.functoolz import compose
 
 from lsci import logger
 
-
-def floats(value):
-    float_types = [np.float16, np.float32, np.float64, np.float128, np.float]
-    if any([isinstance(value, type) for type in float_types]):
-        value = float(value)
-    return value
-
-
-def ints(value):
-    int_types = [np.int8, np.int16, np.int32, np.int64,
-                 np.uint8, np.uint16, np.uint32, np.uint64]
-    if any([isinstance(value, type) for type in int_types]):
-        value = int(value)
-    return value
+from lfe import decoders as lfe_decoders
 
 
 def dicts(value):
+    logger.debug("Value: ", value)
     if (isinstance(value, list)
-        and all([isinstance(x, tuple) for x in value])
-        and all([len(x) == 2 for x in value])):
-        value = dict(value)
+        and len(value) > 0
+        and isinstance(value[0], np.ndarray)):
+        pass
+    else:
+        value = lfe_decoders.dicts(value)
     return value
+
 
 def interp1d(value):
     if (isinstance(value, tuple)
@@ -42,8 +33,10 @@ def interp1d(value):
     return value
 
 
-def get_all(value):
+def decode(value):
     return compose(dicts,
-                   #floats,
-                   #ints,
+                   lfe_decoders.dates,
+                   lfe_decoders.datetimes,
+                   lfe_decoders.times,
+                   lfe_decoders.timedeltas,
                    interp1d)(value)

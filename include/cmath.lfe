@@ -45,15 +45,15 @@
       (complex 2))))
 
 (defmacro generate-cmath-api ()
-  `(progn ,@(lsci-util:make-funcs (get-cmath-funcs) 'cmath)))
+  `(progn ,@(py-util:make-funcs (get-cmath-funcs) 'cmath)))
 
 (defmacro generate-builtins-api ()
-  `(progn ,@(lsci-util:make-funcs (get-builtins-funcs) 'builtins)))
+  `(progn ,@(py-util:make-funcs (get-builtins-funcs) 'builtins)))
 
 (generate-cmath-api)
 (generate-builtins-api)
 
-(defun loaded ()
+(defun loaded-cmath ()
   "This is just a dummy function for display purposes when including from the
   REPL (the last function loaded has its name printed in stdout).
   This function needs to be the last one in this include."

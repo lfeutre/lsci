@@ -39,11 +39,11 @@ loaded
 ```
 
 ```cl
-> (lsci-np:->string array)
+> (lsci-np:->str array)
 #B(1 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 4 0 0 0 0 0 ...)
-> (lsci-np:->string array "C")
+> (lsci-np:->str array "C")
 #B(1 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 4 0 0 0 0 0 ...)
-> (lsci-np:->string array "F")
+> (lsci-np:->str array "F")
 #B(1 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 2 0 0 0 0 0 ...)
 ```
 
@@ -79,7 +79,7 @@ ok
 > (set array (lsci-np:array '((1 2 3) (4 5 6) (7 8 9))))
 #($erlport.opaque python
   #B(128 2 99 110 117 109 112 121 46 99 111 114 101 46 109 117 108 ...))
-> (lsci-py:type array)
+> (py:ptype array)
 numpy.ndarray
 ```
 
@@ -87,7 +87,7 @@ numpy.ndarray
 > (set matrix (lsci-np:asmatrix '((1 2 3) (4 5 6) (7 8 9))))
 #($erlport.opaque python
   #B(128 2 99 110 117 109 112 121 46 99 111 114 101 46 109 117 108 ...))
-> (lsci-py:type matrix)
+> (py:ptype matrix)
 numpy.matrixlib.defmatrix.matrix
 ```
 
@@ -106,8 +106,6 @@ numpy.matrixlib.defmatrix.matrix
 > (set a (lsci-np:arange 4.0))
 #($erlport.opaque python
   #B(128 2 99 110 117 109 112 121 46 99 111 114 101 46 109 117 108 ...))
-> (lsci-np:->list a)
-(0.0 1.0 2.0 3.0)
 > (lsci-np:->list a)
 (0.0 1.0 2.0 3.0)
 > (set a (lsci-np:arange 4 12))

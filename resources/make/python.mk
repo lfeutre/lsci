@@ -1,4 +1,5 @@
 ERL_PORT_LIB=deps/erlport/priv/python3
+LFE_PY=deps/py/python
 LIB=python
 VENV=$(LIB)/.venv
 REQS=$(LIB)/requirements.txt
@@ -11,8 +12,9 @@ get-py-deps:
 	pip3 install -r $(REQS)
 
 python: venv get-py-deps
+	@-ln -s ../$(LFE_PY)/lfe $(LIB)/
 
 interp:
 	@. $(VENV)/bin/activate && \
-	PYTHONPATH=$(LIB):$(ERL_PORT_LIB) \
+	PYTHONPATH=$(LIB):$(ERL_PORT_LIB):$(LFE_PY) \
 	python3

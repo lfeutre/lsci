@@ -3,8 +3,9 @@
 
 (include-lib "lsci/include/sp.lfe")
 
+;; XXX is the 'str needed in this case?
 (defun version ()
-  (lsci-py:const 'scipy '__version__ 'str))
+  (py:const 'scipy '__version__ 'str))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Wrappers - the following functions couldn't be simply wrapped with the
@@ -15,13 +16,13 @@
 ;; Interpolation
 ;;
 (defun interpolate.interp1d (x y)
-  (lsci-py:func 'scipy.interpolate
+  (py:func 'scipy.interpolate
                      'interp1d
                      `(,x ,y)
                      '()))
 
 (defun interpolate.interp1d (x y kwargs)
-  (lsci-py:func 'scipy.interpolate
+  (py:func 'scipy.interpolate
                      'interp1d
                      `(,x ,y)
                      kwargs))

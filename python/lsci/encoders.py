@@ -1,16 +1,10 @@
-from erlport.erlterms import Atom
-
 from scipy.interpolate import interpolate
 
 from cytoolz.functoolz import compose
 
 from lsci import logger
 
-
-def dicts(value):
-    if isinstance(value, dict):
-        value = [x for x in value.items()]
-    return value
+from lfe.encoders import encode as lfe_encode
 
 
 def interp1d(value):
@@ -23,6 +17,6 @@ def interp1d(value):
     return value
 
 
-def get_all(value):
-    return compose(dicts,
+def encode(value):
+    return compose(lfe_encode,
                    interp1d)(value)

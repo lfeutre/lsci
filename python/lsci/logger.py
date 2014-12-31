@@ -2,9 +2,9 @@ import logging
 
 
 logging.basicConfig(
-    format='[%(asctime)s] [%(levelname)s] %(message)s',
+    format='[%(asctime)s] [lsci:py] [%(levelname)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M',
-    level=logging.WARN)
+    level=logging.DEBUG)
 
 
 warn = logging.warning

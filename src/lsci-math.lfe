@@ -4,10 +4,10 @@
 (include-lib "lsci/include/math.lfe")
 
 (defun pi ()
-  (lsci-py:const 'math 'pi 'float))
+  (py:const 'math 'pi))
 
 (defun e ()
-  (lsci-py:const 'math 'e 'float))
+  (py:const 'math 'e))
 
 (defun phi (x)
   "Cumulative distribution function for the standard normal distribution."

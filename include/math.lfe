@@ -88,19 +88,19 @@
       (pos 1))))
 
 (defmacro generate-math-api ()
-  `(progn ,@(lsci-util:make-funcs (get-math-funcs) 'math)))
+  `(progn ,@(py-util:make-funcs (get-math-funcs) 'math)))
 
 (defmacro generate-builtins-api ()
-  `(progn ,@(lsci-util:make-funcs (get-builtins-funcs) 'builtins)))
+  `(progn ,@(py-util:make-funcs (get-builtins-funcs) 'builtins)))
 
 (defmacro generate-operator-api ()
-  `(progn ,@(lsci-util:make-funcs (get-operator-funcs) 'operator)))
+  `(progn ,@(py-util:make-funcs (get-operator-funcs) 'operator)))
 
 (generate-math-api)
 (generate-builtins-api)
 (generate-operator-api)
 
-(defun loaded ()
+(defun loaded-math ()
   "This is just a dummy function for display purposes when including from the
   REPL (the last function loaded has its name printed in stdout).
   This function needs to be the last one in this include."

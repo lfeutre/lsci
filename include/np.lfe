@@ -134,23 +134,23 @@
       )))
 
 (defmacro generate-np-create-api ()
-  `(progn ,@(lsci-util:make-funcs (get-np-create-funcs) 'numpy)))
+  `(progn ,@(py-util:make-funcs (get-np-create-funcs) 'numpy)))
 
 (defmacro generate-np-manip-api ()
-  `(progn ,@(lsci-util:make-funcs (get-np-manip-funcs) 'numpy)))
+  `(progn ,@(py-util:make-funcs (get-np-manip-funcs) 'numpy)))
 
 (defmacro generate-np-math-api ()
-  `(progn ,@(lsci-util:make-funcs (get-np-math-funcs) 'numpy)))
+  `(progn ,@(py-util:make-funcs (get-np-math-funcs) 'numpy)))
 
 (defmacro generate-np-other-api ()
-  `(progn ,@(lsci-util:make-funcs (get-np-other-funcs) 'numpy)))
+  `(progn ,@(py-util:make-funcs (get-np-other-funcs) 'numpy)))
 
 (generate-np-create-api)
 (generate-np-manip-api)
 (generate-np-math-api)
 (generate-np-other-api)
 
-(defun loaded ()
+(defun loaded-np ()
   "This is just a dummy function for display purposes when including from the
   REPL (the last function loaded has its name printed in stdout).
   This function needs to be the last one in this include."

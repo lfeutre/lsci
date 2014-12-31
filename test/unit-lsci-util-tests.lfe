@@ -4,9 +4,6 @@
 
 (include-lib "ltest/include/ltest-macros.lfe")
 
-(deftest proplist->binary
-  (let ((data '(#(a 1) #(b 2) #(c 3)))
-        (expected '((#b(97) 1) (#b(98) 2) (#b(99) 3))))
-    (is-equal
-      expected
-      (lsci-util:proplist->binary data))))
+(deftest placeholder
+  (is-equal
+    1 1))
