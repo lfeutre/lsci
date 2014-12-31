@@ -36,7 +36,7 @@
         ))))
 
 (defun set-up ()
-  (lsci:start))
+  (lsci:start '(#(with-ncurses false))))
 
 (defun tear-down (_)
   (lsci:stop))

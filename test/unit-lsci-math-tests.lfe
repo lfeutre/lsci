@@ -40,7 +40,7 @@
       (is-equal 4.667 (lsci-math:round 4.6666667 3)))))
 
 (defun set-up ()
-  (lsci:start))
+  (lsci:start '(#(with-ncurses false))))
 
 (defun tear-down (_)
   (lsci:stop))
