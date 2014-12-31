@@ -15,3 +15,9 @@
         #(python ,(py-util:get-python-version))
         #(numpy ,(lsci-np:version))
         #(scipy ,(lsci-sp:version)))))
+
+(defun override-py-env ()
+  (lists:map
+    (match-lambda ((`#(,key ,val))
+      (application:set_env 'py key val)))
+    (application:get_all_env 'lsci)))
