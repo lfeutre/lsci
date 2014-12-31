@@ -3,6 +3,9 @@
 
 (include-lib "lsci/include/math.lfe")
 
+(defun version ()
+  (py-util:get-python-version))
+
 (defun pi ()
   (py:const 'math 'pi))
 

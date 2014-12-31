@@ -3,6 +3,9 @@
 
 (include-lib "lsci/include/cmath.lfe")
 
+(defun version ()
+  (py-util:get-python-version))
+
 (defun pi ()
   (py:const 'cmath 'pi 'float))
 
