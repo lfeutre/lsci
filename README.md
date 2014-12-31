@@ -152,8 +152,10 @@ $ make shell-no-deps
 
 More detailed usage information in separate docs, per-wrapped library:
 
-* [lsci-math & lsci-cmath](doc/math.md) - ``math`` and ``cmath`` Python
+* [lsci-math & lsci-cmath](doc/math.md) - The ``math`` and ``cmath`` Python
   Standard library modules in LFE
+* [lsci-stats](doc/stats.md) - The ``statistics`` Python 3 Standard library
+  modules in LFE
 * [lsci-np](doc/numpy.md) - NumPy in LFE
 * [lsci-sp](doc/scipy.md) - SciPy in LFE
 * lsci-pd - Pandas in LFE (TBD)
