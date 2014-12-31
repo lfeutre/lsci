@@ -42,19 +42,6 @@
 (defun cartesian->ncurses (ys y-max)
   (lsci-math:sub y-max ys))
 
-;; Example usage:
-;;
-;; > (set data (lsci-np:genfromtxt
-;;               "examples/polyfit/filip.csv"
-;;               `(#(delimiter ,(list_to_binary ","))
-;;                 #(names true))))
-;; #($erlport.opaque python ...)
-;; > (set xs (lsci-np:get data 'x))
-;; #($erlport.opaque python ...)
-;; > (set ys (lsci-np:get data 'y))
-;; #($erlport.opaque python ...)
-;; > (scatter xs ys "o")
-;;
 (defun plot (xs ys)
   (scatter xs ys '()))
 
@@ -79,6 +66,19 @@
             marker)
     (finish y-max)))
 
+;; Example usage:
+;;
+;; > (set data (lsci-np:genfromtxt
+;;               "examples/polyfit/filip.csv"
+;;               `(#(delimiter ,(list_to_binary ","))
+;;                 #(names true))))
+;; #($erlport.opaque python ...)
+;; > (set xs (lsci-np:get data 'x))
+;; #($erlport.opaque python ...)
+;; > (set ys (lsci-np:get data 'y))
+;; #($erlport.opaque python ...)
+;; > (scatter xs ys "o")
+;;
 (defun scatter (xs ys)
   (scatter xs ys '()))
 
