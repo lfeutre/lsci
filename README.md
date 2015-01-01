@@ -20,6 +20,10 @@ the current development status:
    <strong>complete</strong>
  * [statistics](https://docs.python.org/3/library/statistics.html) -
    <strong>complete</strong>
+ * [fractions](https://docs.python.org/3/library/fractions.html) -
+   <em>not started</em>
+ * [decimal](https://docs.python.org/3/library/decimal.html) -
+   <em>not started</em>
  * [NumPy](http://www.numpy.org/) -
    <strong>in progress</strong>
  * [SciPy](http://www.scipy.org/scipylib/index.html) -
