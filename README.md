@@ -2,7 +2,7 @@
 
 *Scientific Computing on the Erlang VM - An LFE Wrapper Library for SciPy, NumPy, and matplotlib*
 
-<img src="resources/images/elsie-logo-1.png"/>
+<img src="resources/images/lsci-logo-1.png"/>
 
 
 ## Introduction
