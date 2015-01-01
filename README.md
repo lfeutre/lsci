@@ -105,9 +105,11 @@ of things -- in particular, let's confirm that you're running Python 3:
 ```cl
 > (lsci-util:get-versions)
 (#(erlang "17")
- #(emulator "6.3")
+ #(emulator "6.2")
  #(driver-version "3.1")
  #(lfe "0.9.0")
+ #(erlport "0.9.8")
+ #(py "0.0.2")
  #(lsci "0.0.1")
  #(python
    ("3.4.2 (v3.4.2:ab2c023a9432, Oct  5 2014, 20:42:22)"
@@ -117,15 +119,27 @@ of things -- in particular, let's confirm that you're running Python 3:
 >
 ```
 
-lsci provides a wrapper for the ErlPort ``(python:call pid ...)`` form:
+lsci comes with [py](https://github.com/lfex/py), so you can make calls
+with that library:
 
 ```cl
-> (lsci:py 'os 'getcwd)
+> (py:func 'os 'getpwd)
 "/Users/yourname/lab/erlang/lsci"
 ```
 
-lsci can do this because it starts up a Python server and registers the pid
-with a name.
+And then of course, math, NumPy, etc.:
+
+```cl
+> (lsci-math:pow 2 32)
+4294967296.0
+> (set array (lsci-np:array '((1 2 3) (4 5 6) (7 8 9))))
+#($erlport.opaque python
+  #B(128 2 99 110 117 109 112 121 46 99 111 114 101 46 109 117 108 ...))
+> (lsci-np:size array)
+9
+> (lsci-np:shape array)
+#(3 3)
+```
 
 
 #### Erlang
@@ -139,16 +153,28 @@ $ make shell-no-deps
 ```erlang
 1> 'lsci-util':'get-versions'().
 [{erlang,"17"},
- {emulator,"6.3"},
+ {emulator,"6.2"},
  {'driver-version',"3.1"},
  {lfe,"0.9.0"},
+ {erlport,"0.9.8"},
+ {py,"0.0.2"},
  {lsci,"0.0.1"},
  {python,["3.4.2 (v3.4.2:ab2c023a9432, Oct  5 2014, 20:42:22)",
           "[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)]"]},
  {numpy,"1.9.1"},
  {scipy,"0.14.0"}]
-2> lsci:py(os, getcwd).
+2> py:func(os, getcwd).
 "/Users/yourname/lab/erlang/lsci"
+3> 'lsci-math':pow(2, 32).
+4294967296.0
+4> Array = 'lsci-np':array([[1,2,3], [4,5,6],[7,8,9]]).
+{'$erlport.opaque',python,
+                   <<128,2,99,110,117,109,112,121,46,99,111,114,101,46,109,
+                     117,108,116,105,97,114,114,97,121,10,95,...>>}
+5> 'lsci-np':size(Array).
+9
+6> 'lsci-np':shape(Array).
+{3,3}
 ```
 
 
@@ -169,8 +195,11 @@ More detailed usage information in separate docs, per-wrapped library:
 
 ## Development
 
-For the latest thoughts on interface, archiecture, etc., see the
-[project Wiki](https://github.com/oubiwann/lsci/wiki).
+Features waiting to be implemented are
+[created as issues](https://github.com/lfex/lsci/issues); check them out
+to see how you can contribute.
+
+Read up on [py](https://github.com/lfex/py) to get a feeling for how lsci works.
 
 To understand how the wrapping is done in lsci, check out the
 [kla project](https://github.com/billosys/kla) and
