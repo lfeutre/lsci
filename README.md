@@ -38,7 +38,13 @@ the current development status:
 Quick sample:
 
 ```cl
-
+> (set array (lsci-np:array '((1 2 3) (4 5 6) (7 8 9))))
+#($erlport.opaque python
+  #B(128 2 99 110 117 109 112 121 46 99 111 114 101 46 109 117 108 ...))
+> (lsci-np:size array)
+9
+> (lsci-np:shape array)
+#(3 3)
 ```
 
 And it's pronounced "Elsie".
@@ -116,7 +122,6 @@ of things -- in particular, let's confirm that you're running Python 3:
     "[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)]"))
  #(numpy "1.9.1")
  #(scipy "0.14.0"))
->
 ```
 
 lsci comes with [py](https://github.com/lfex/py), so you can make calls
