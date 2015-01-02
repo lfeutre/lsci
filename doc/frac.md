@@ -64,7 +64,6 @@
 ```cl
 > (lsci-frac:->float (lsci-frac:new 1 3))
 0.3333333333333333
-#("fraction" #(3 4))
 > (set frac-2 (lsci-frac:new 0.5))
 #("fraction" #(1 2))
 > (lsci-frac:gcd frac-1 frac-2)
