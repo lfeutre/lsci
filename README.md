@@ -5,7 +5,18 @@
 <img src="resources/images/lsci-logo-1.png"/>
 
 
-## Introduction
+## Table of Contents
+
+* [Introduction](#introduction-)
+* [Requirements](#requirements-)
+* [Usage](#usage-)
+  * [From LFE](#from-lfe-)
+  * [From Erlang](#from-erlang-)
+  * [Wrapped Library Docs](#wrapped-library-docs-)
+* [Development](#development-)
+
+
+## Introduction [&#x219F;](#table-of-contents)
 
 This project has the lofty goal of making numerical processing an efficient and
 easy thing to do in LFE/Erlang. The engine behind this work is
@@ -50,7 +61,7 @@ Quick sample:
 And it's pronounced "Elsie".
 
 
-## Requirements
+## Requirements [&#x219F;](#table-of-contents)
 
 To use lsci, you need the following:
 
@@ -69,7 +80,7 @@ $ make
 ```
 
 
-## Usage
+## Usage [&#x219F;](#table-of-contents)
 
 Activate your Python virtualenv and then start up the LFE REPL:
 
@@ -86,15 +97,12 @@ these ``make`` targets, you'll need to manually start things:
 $ lfetool repl lfe -s lsci
 ```
 
-
-### Basic Usage
-
 Below we show some basic usage of lsci from both LFE and Erlang. In a
 separate section a list of docs are linked showing detailed usage of wrapped
 libraries.
 
 
-#### LFE
+### From LFE [&#x219F;](#table-of-contents)
 
 Start up the LFE REPL:
 
@@ -147,7 +155,7 @@ And then of course, math, NumPy, etc.:
 ```
 
 
-#### Erlang
+### From Erlang [&#x219F;](#table-of-contents)
 
 Yes, we can do the same thing from Erlang:
 
@@ -183,7 +191,7 @@ $ make shell-no-deps
 ```
 
 
-### Wrapped Library Docs
+### Wrapped Library Docs [&#x219F;](#table-of-contents)
 
 More detailed usage information in separate docs, per-wrapped library:
 
@@ -200,7 +208,7 @@ More detailed usage information in separate docs, per-wrapped library:
 * lsci-sym - SymPy in LFE (TBD)
 
 
-## Development
+## Development [&#x219F;](#table-of-contents)
 
 Features waiting to be implemented are
 [created as issues](https://github.com/lfex/lsci/issues); check them out
