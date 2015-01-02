@@ -1,3 +1,5 @@
+from fractions import Fraction
+
 import numpy as np
 
 from scipy.interpolate import interpolate
@@ -6,7 +8,7 @@ from cytoolz.functoolz import compose
 
 from lsci import logger
 
-from lfe import decoders as lfe_decoders
+from lfe import decoders as lfe_decoders, erlang
 
 
 def dicts(value):
@@ -20,10 +22,17 @@ def dicts(value):
     return value
 
 
+def fractions(value):
+    if (isinstance(value, tuple)
+        and value[0] == erlang.List("fraction")):
+        value = Fraction(*value[1])
+    return value
+
+
 def interp1d(value):
     if (isinstance(value, tuple)
         and len(value) == 2
-        and value[0] == b"interp1d"):
+        and value[0] == erlang.List("interp1d")):
         logger.debug(value)
         (x, y, kind, axis, copy, bounds_error) = value[1]
         kind = kind.decode("utf-8")
@@ -35,6 +44,7 @@ def interp1d(value):
 
 def decode(value):
     return compose(dicts,
+                   fractions,
                    lfe_decoders.dates,
                    lfe_decoders.datetimes,
                    lfe_decoders.times,

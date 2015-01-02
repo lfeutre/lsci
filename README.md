@@ -21,9 +21,9 @@ the current development status:
  * [statistics](https://docs.python.org/3/library/statistics.html) -
    <strong>complete</strong>
  * [fractions](https://docs.python.org/3/library/fractions.html) -
-   <em>not started</em>
+   <strong>complete</strong>
  * [decimal](https://docs.python.org/3/library/decimal.html) -
-   <em>not started</em>
+   <strong>in progress</strong>
  * [NumPy](http://www.numpy.org/) -
    <strong>in progress</strong>
  * [SciPy](http://www.scipy.org/scipylib/index.html) -
@@ -190,7 +190,9 @@ More detailed usage information in separate docs, per-wrapped library:
 * [lsci-math & lsci-cmath](doc/math.md) - The ``math`` and ``cmath`` Python
   Standard library modules in LFE
 * [lsci-stats](doc/stats.md) - The ``statistics`` Python 3 Standard library
-  modules in LFE
+  module in LFE
+* [lsci-frac](doc/frac.md) - The ``fractions`` Python 3 Standard library
+  module in LFE
 * [lsci-np](doc/numpy.md) - NumPy in LFE
 * [lsci-sp](doc/scipy.md) - SciPy in LFE
 * lsci-pd - Pandas in LFE (TBD)
