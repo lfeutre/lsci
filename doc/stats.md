@@ -1,4 +1,4 @@
-# Python ``statistics`` Module in LFE
+# SciPy ``stats`` Module in LFE
 
 ## Averages and Measures of Central Location
 
