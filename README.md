@@ -9,6 +9,7 @@
 
 * [Introduction](#introduction-)
 * [Requirements](#requirements-)
+* [Installation](#installation-)
 * [Usage](#usage-)
   * [From LFE](#from-lfe-)
   * [From Erlang](#from-erlang-)
@@ -69,7 +70,7 @@ To use lsci, you need the following:
 * [Python 3](https://www.python.org/downloads/)
 
 
-## Installation
+## Installation [&#x219F;](#table-of-contents)
 
 For now, just run it from a git clone:
 
