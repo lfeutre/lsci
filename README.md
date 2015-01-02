@@ -105,7 +105,7 @@ libraries.
 
 ### From LFE [&#x219F;](#table-of-contents)
 
-Start up the LFE REPL:
+You should be in your REPL at the terminal:
 
 ```cl
 Erlang/OTP 17 [erts-6.3] [source] [64-bit] [smp:4:4] [async-threads:10] ...
@@ -158,7 +158,7 @@ And then of course, math, NumPy, etc.:
 
 ### From Erlang [&#x219F;](#table-of-contents)
 
-Yes, we can do the same thing from Erlang:
+We can do the same thing from Erlang:
 
 ```bash
 $ make shell-no-deps
