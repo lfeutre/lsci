@@ -194,7 +194,8 @@ $ make shell-no-deps
 
 ### Wrapped Library Docs [&#x219F;](#table-of-contents)
 
-More detailed usage information in separate docs, per-wrapped library:
+More detailed usage information is provided in separate docs, per-wrapped
+library:
 
 * [lsci-math & lsci-cmath](doc/math.md) - The ``math`` and ``cmath`` Python
   Standard library modules in LFE
