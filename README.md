@@ -149,7 +149,7 @@ And then of course, math, NumPy, etc.:
 
 #### Erlang
 
-We can, of course, do the same thing from Erlang:
+Yes, we can do the same thing from Erlang:
 
 ```bash
 $ make shell-no-deps
