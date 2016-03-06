@@ -12,3 +12,4 @@ python/.venv
 __pycache__
 log/*
 python/lfe
+python/get-pip.py
