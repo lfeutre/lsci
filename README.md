@@ -137,7 +137,7 @@ lsci comes with [py](https://github.com/lfex/py), so you can make calls
 with that library:
 
 ```cl
-> (py:func 'os 'getpwd)
+> (py:func 'os 'getcwd)
 "/Users/yourname/lab/erlang/lsci"
 ```
 
