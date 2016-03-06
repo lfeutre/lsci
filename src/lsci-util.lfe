@@ -7,8 +7,11 @@
 (defun get-lsci-version ()
   (lutil:get-app-src-version "src/lsci.app.src"))
 
+(defun get-version ()
+  `(#(lsci ,(get-lsci-version))))
+
 (defun get-versions ()
-  (++ (lutil:get-version)
+  (++ (lutil:get-versions)
       `(#(erlport ,(py-util:get-erlport-version))
         #(py ,(get-py-version))
         #(lsci ,(get-lsci-version))
